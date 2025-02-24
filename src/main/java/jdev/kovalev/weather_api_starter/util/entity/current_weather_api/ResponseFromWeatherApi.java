@@ -1,10 +1,12 @@
 package jdev.kovalev.weather_api_starter.util.entity.current_weather_api;
 
+import lombok.Builder;
 import lombok.Data;
 
 import java.util.ArrayList;
 
 @Data
+@Builder
 public class ResponseFromWeatherApi {
     private CoordFromApi coord;
     private ArrayList<WeatherFromApi> weather;

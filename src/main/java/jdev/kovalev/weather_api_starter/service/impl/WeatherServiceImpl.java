@@ -42,7 +42,7 @@ public class WeatherServiceImpl implements WeatherService {
         return getResponse(city, appid);
     }
 
-    private String getResponse(String city, String appid) {
+    public String getResponse(String city, String appid) {
         ObjectMapper objectMapper = new ObjectMapper();
         CurrentWeather currentWeather;
         currentWeather = cache.get(city);
