@@ -3,10 +3,11 @@ plugins {
 	id("org.springframework.boot") version "3.4.3"
 	id("io.spring.dependency-management") version "1.1.7"
 	id("io.freefair.lombok") version "8.12.1"
+	`maven-publish`
 }
 
 group = "jdev.kovalev"
-version = "0.0.1-SNAPSHOT"
+version = "1.0.0"
 
 java {
 	toolchain {
@@ -16,6 +17,18 @@ java {
 
 repositories {
 	mavenCentral()
+}
+
+publishing {
+	publications {
+		create<MavenPublication>("mavenJava") {
+			from(components["java"])
+			artifactId = "weather-api-starter"
+		}
+	}
+	repositories {
+		mavenLocal()
+	}
 }
 
 val mapstructVersion = "1.6.3"

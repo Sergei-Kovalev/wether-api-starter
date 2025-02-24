@@ -5,11 +5,9 @@ import jdev.kovalev.weather_api_starter.exception.CityNameNotValidException;
 import jdev.kovalev.weather_api_starter.util.OpenWeatherReceiver;
 import jdev.kovalev.weather_api_starter.util.entity.current_weather_api.ResponseFromWeatherApi;
 import jdev.kovalev.weather_api_starter.util.entity.geocoding_api.ResponseFromGeocodingApi;
-import org.springframework.stereotype.Component;
 import org.springframework.web.client.HttpStatusCodeException;
 import org.springframework.web.client.RestTemplate;
 
-@Component
 public class OpenWeatherReceiverImpl implements OpenWeatherReceiver {
     @Override
     public ResponseFromWeatherApi getCurrentWeather(String city, String appid) {

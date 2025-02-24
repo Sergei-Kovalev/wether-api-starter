@@ -1,7 +1,6 @@
 package jdev.kovalev.weather_api_starter.cache.impl;
 
 import jdev.kovalev.weather_api_starter.cache.Cache;
-import org.springframework.stereotype.Component;
 
 import java.util.LinkedHashMap;
 import java.util.Set;
@@ -11,7 +10,6 @@ import java.util.Set;
  * @param <K> - объект ключа
  * @param <V> - объект значения
  */
-@Component
 public class LRUCache<K, V> implements Cache<K, V> {
 
     /**

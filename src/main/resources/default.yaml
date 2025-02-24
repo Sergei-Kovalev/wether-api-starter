@@ -1,0 +1,3 @@
+weather-api-starter:
+  api-key: bd5e378503939ddaee76f12ad7a97608
+  polling-mode: false # on-demand by default
