@@ -29,6 +29,20 @@ public class WeatherServiceImpl implements WeatherService {
 
     @Override
     public String getWeather(String city) {
+        return getResponse(city, appid);
+    }
+
+    @Override
+    public void deleteWeatherInfo(String city) {
+        cache.remove(city);
+    }
+
+    @Override
+    public String getWeatherWithAnotherApiKey(String city, String appid) {
+        return getResponse(city, appid);
+    }
+
+    private String getResponse(String city, String appid) {
         ObjectMapper objectMapper = new ObjectMapper();
         CurrentWeather currentWeather;
         currentWeather = cache.get(city);
