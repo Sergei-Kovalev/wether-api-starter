@@ -4,6 +4,7 @@ import jdev.kovalev.weather_api_starter.cache.Cache;
 import org.springframework.stereotype.Component;
 
 import java.util.LinkedHashMap;
+import java.util.Set;
 
 /**
  * Объект для создания LRU(Last recently used) кэша
@@ -68,6 +69,15 @@ public class LRUCache<K, V> implements Cache<K, V> {
     @Override
     public void remove(K key) {
         cache.remove(key);
+    }
+
+    /**
+     * Метод возвращающий все ключи из кэша
+     * @return список ключей
+     */
+    @Override
+    public Set<K> getAllKeys() {
+        return cache.keySet();
     }
 
     /**

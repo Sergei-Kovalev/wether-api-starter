@@ -5,7 +5,9 @@ import jdev.kovalev.weather_api_starter.service.WeatherService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
+@EnableScheduling
 @SpringBootApplication
 public class WeatherApiStarterApplication {
 

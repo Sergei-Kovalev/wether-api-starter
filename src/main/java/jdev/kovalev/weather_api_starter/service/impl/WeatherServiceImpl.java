@@ -9,17 +9,18 @@ import jdev.kovalev.weather_api_starter.service.WeatherService;
 import jdev.kovalev.weather_api_starter.util.OpenWeatherReceiver;
 import jdev.kovalev.weather_api_starter.util.entity.current_weather_api.ResponseFromWeatherApi;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
 public class WeatherServiceImpl implements WeatherService {
+    @Value("${application.api-key}")
+    private String appid;
 
     private final OpenWeatherReceiver openWeatherReceiver;
     private final CurrentWeatherMapper currentWeatherMapper;
     private final Cache<String, CurrentWeather> cache;
-
-    private final String appid = "bd5e378503939ddaee76f12ad7a97608";
 
     @Override
     public String getWeather(String city) throws JsonProcessingException {
