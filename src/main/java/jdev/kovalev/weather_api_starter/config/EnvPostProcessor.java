@@ -9,6 +9,10 @@ import org.springframework.core.io.ClassPathResource;
 
 import java.io.IOException;
 
+/**
+ * Объект для чтения дефолтного конфига для стартера
+ * @author Sergey Kovalev
+ */
 public class EnvPostProcessor implements EnvironmentPostProcessor {
     private final YamlPropertySourceLoader propertySourceLoader;
 
@@ -16,6 +20,11 @@ public class EnvPostProcessor implements EnvironmentPostProcessor {
         propertySourceLoader = new YamlPropertySourceLoader();
     }
 
+    /**
+     * Метод считывающий конфиг из файла
+     * @param environment
+     * @param application
+     */
     @Override
     public void postProcessEnvironment(ConfigurableEnvironment environment, SpringApplication application) {
         ClassPathResource resource = new ClassPathResource("default.yaml");

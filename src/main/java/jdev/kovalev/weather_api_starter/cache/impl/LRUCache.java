@@ -9,6 +9,7 @@ import java.util.Set;
  * Объект для создания LRU(Last recently used) кэша
  * @param <K> - объект ключа
  * @param <V> - объект значения
+ * @author Sergey Kovalev
  */
 public class LRUCache<K, V> implements Cache<K, V> {
 

@@ -7,7 +7,10 @@ import jdev.kovalev.weather_api_starter.util.OpenWeatherReceiver;
 import jdev.kovalev.weather_api_starter.util.entity.current_weather_api.ResponseFromWeatherApi;
 import org.springframework.scheduling.annotation.Scheduled;
 
-
+/**
+ * Класс шедулера, выполняющего запросы с заданной периодичностью и обновляющий данные в кэш
+ * @author Sergey Kovalev
+ */
 public class CurrentWeatherScheduler {
     private final String appid;
 
@@ -25,6 +28,10 @@ public class CurrentWeatherScheduler {
         this.cache = cache;
     }
 
+    /**
+     * Основной метод который выполняется с периодичностью каждые 10 минут.
+     * Сохраняет полученные данные в кэш
+     */
     @Scheduled(fixedDelay = 600000)
     public void updateCurrentWeather() {
         cache.getAllKeys().forEach(city -> {

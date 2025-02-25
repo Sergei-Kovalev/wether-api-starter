@@ -5,6 +5,10 @@ import lombok.Data;
 
 import java.util.ArrayList;
 
+/**
+ * Базовый класс объекта получаемого от API <a href="https://openweathermap.org/api">...</a>
+ * @author Sergey Kovalev
+ */
 @Data
 @Builder
 public class ResponseFromWeatherApi {

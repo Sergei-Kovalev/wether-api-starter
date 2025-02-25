@@ -3,6 +3,10 @@ package jdev.kovalev.weather_api_starter.entity;
 import lombok.Builder;
 import lombok.Data;
 
+/**
+ * Базовый класс объекта для хранения/ответа пользователю
+ * @author Sergey Kovalev
+ */
 @Data
 @Builder
 public class CurrentWeather {
