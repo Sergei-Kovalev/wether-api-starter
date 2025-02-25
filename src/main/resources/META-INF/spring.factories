@@ -1,0 +1,1 @@
+org.springframework.boot.env.EnvironmentPostProcessor=jdev.kovalev.weather_api_starter.config.EnvPostProcessor
