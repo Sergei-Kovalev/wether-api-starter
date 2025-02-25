@@ -72,3 +72,5 @@ SDK реализовано в виде стартера, который можн
    - ApiKeyNotValidException - пользователь указал неверный API key.
    - CityNameNotValidException - пользователь указал наименование города, которое не найдено.
    - WeatherFromApiNotFoundException - данные о погоде не найдены.
+2. getWeatherWithAnotherApiKey(String city, String appid) - предоставляет данные о погоде по выбранному городу в формате JSON. Аналогичен первому, только предоставляет возможность зайти пользователю с другим ключом. Ответы и ошибки те же.
+3. deleteWeatherInfo(String city) - удаляет из кэша данные о погоде по указанному городу.
